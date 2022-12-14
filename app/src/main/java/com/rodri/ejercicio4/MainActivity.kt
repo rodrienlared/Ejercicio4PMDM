@@ -27,12 +27,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.bajar.setOnClickListener {
-            if (binding.marcador.text.toString().toInt() > 0)
-                binding.marcador.text = (binding.marcador.text.toString().toInt() - 1).toString()
+            if(binding.marcador.text.isNotEmpty())
+                if (binding.marcador.text.toString().toInt() > 0)
+                    binding.marcador.text = (binding.marcador.text.toString().toInt() - 1).toString()
         }
 
         binding.subir.setOnClickListener {
-            binding.marcador.text = (binding.marcador.text.toString().toInt() + 1).toString()
+            if(binding.marcador.text.isNotEmpty())
+                binding.marcador.text = (binding.marcador.text.toString().toInt() + 1).toString()
         }
 
         binding.introducirNumero.addTextChangedListener(object : TextWatcher {
