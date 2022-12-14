@@ -14,7 +14,18 @@
         android:layout_marginBottom="50dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Introduce un número "
+        android:hint="Introduce un número"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/introducirNumeroTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Pulsa aquí para salir del primer EditText"
         android:inputType="number"
         android:minHeight="48dp" />
 
